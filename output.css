@@ -7,8 +7,10 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-white: #fff;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-poppins: "Poppins", sans-serif;
   }
 }
 @layer base {
@@ -159,4 +161,91 @@
     display: none !important;
   }
 }
-@layer utilities;
+@layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
+  .m-0 {
+    margin: 0px;
+  }
+  .mt-\[1em\] {
+    margin-top: 1em;
+  }
+  .flex {
+    display: flex;
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .w-5\/6 {
+    width: calc(5 / 6 * 100%);
+  }
+  .w-screen {
+    width: 100vw;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .rounded-\[0\.8em\] {
+    border-radius: 0.8em;
+  }
+  .bg-\[\#9873fe\] {
+    background-color: #9873fe;
+  }
+  .bg-\[\#e5dbff\] {
+    background-color: #e5dbff;
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .p-0 {
+    padding: 0px;
+  }
+  .p-\[2em\] {
+    padding: 2em;
+  }
+  .py-\[0\.8em\] {
+    padding-block: 0.8em;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .font-poppins {
+    font-family: var(--font-poppins);
+  }
+  .text-\[1\.2em\] {
+    font-size: 1.2em;
+  }
+  .text-\[\#02002c\] {
+    color: #02002c;
+  }
+  @media (hover: hover) {
+    .hover\:cursor-pointer:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -5,9 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"/>
+
     <title>Currency Converter</title>
 </head>
-<body>
+
+
+<body class="bg-[#9873fe] m-0 p-0 font-poppins h-screen w-screen flex justify-center items-center ">
+    
+    
+<!-- //todo big container  -->
+    <div class="wrapper w-5/6 bg-white absolute 
+          flex flex-col justify-center 
+         p-[2em] rounded-[0.8em]">
+        <!-- //todo 5 tinyy things  -->
+
+
+        <!-- //todo 1  -->
+      <div class="app-details flex flex-col items-center">
+
+        <img src="logo.png" class="app-icon" />
+        <h1 class="app-title">Currency Converter</h1>
+
+      </div>
+
+      <!-- //todo 2  -->
+
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" value="100" />
+
+      <!-- //todo 3  -->
+
+      <div class="dropdowns">
+        <select class="bg-white text-[#02002c]" id="from-currency-select">
+          
+        </select>
+        <select id="to-currency-select"></select>
+      </div>
+
+      <!-- //todo 4 -->
+
+      <button class="hover:cursor-pointer" id="convert-button">Convert</button>
+      <!-- //todo 5 -->
+      <p id="result" class="text-[1.2em] text-center mt-[1em] 
+         text-[#02002c] bg-[#e5dbff] 
+         py-[0.8em]"></p>
+
+    </div>
+
+     <script src="currency-code.js"></script>
+   <script src="api-key.js"></script>
+
+    <script src="currency.js"></script>
     
 </body>
 </html>
